@@ -1,5 +1,6 @@
 /* give your assignment a fun background color */
 body{
+  font-family: cursive;
   background-color:rgb(0,0,0);
   background-image:url(http://www.zingerbugimages.com/backgrounds/pink_paisley_pattern_background_seamless.jpg);
   background-position:top left;
