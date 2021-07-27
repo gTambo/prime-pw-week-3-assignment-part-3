@@ -83,8 +83,7 @@ while (x < supplyChanges.length) {
 //    adding up all the numbers in the 'supplyChanges' array.
 console.log('9. Total supplies available is:');
 let total = 0;
-for (let i = 0; i<supplyChanges.length; i++) {
-  total = total + supplyChanges[i];
-  console.log('total is now: ', total);
+for (let i = 0; i < supplyChanges.length; i++) {
+  total = total + Number(supplyChanges[i]);
 }
 console.log(total);
