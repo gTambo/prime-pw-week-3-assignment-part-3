@@ -2,9 +2,10 @@
 body{
   font-family: Arial;
   font-weight: bold;
-  font-size: 25;
-  color: #794859;
+  font-size: 110%;
+  color: #794859; /* dark pink grabbed from background image using image color picker */
   background-color:rgb(0,0,0);
+  /* adding some pink paisley bakground stylings from webpage*/
   background-image:url(http://www.zingerbugimages.com/backgrounds/pink_paisley_pattern_background_seamless.jpg);
   background-position:top left;
   background-repeat:repeat;
@@ -13,19 +14,22 @@ body{
 
 header{
   text-transform: uppercase;
-  background-color: #e9d0d8;
-  border: 4px solid #835162;
+  background-color: #e9d0d8; /* light pink grabbed from background image */
+  border: 4px solid #835162; /* dark pink grabbed from background image */
 }
 
 ol{
-  background-color: #d589a3;
+  background-color: #d589a3; /* dark pink-maroon grabbed from background image */
   border: 4px solid #835162;
 }
 
 h3{
+  /* very light pink for shadow grabbed from background image
+  shadow on text to pop out from background */
   text-shadow: -2px -1px 0 #fff1fa, -2px 1px 0 #fff1fa, 1px 1px 0 #fff1fa, 1px -1px 0 #fff1fa;
-  border: 4px double #835162;
+  border: 6px double #835162;
+  /* in-dent the h3 element */
   margin-right: 70%;
-  margin-left: 10px;
+  margin-left: 5%;
   padding: 3px;
 }
