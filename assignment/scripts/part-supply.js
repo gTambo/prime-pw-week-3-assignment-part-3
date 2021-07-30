@@ -35,14 +35,14 @@ console.log(`supply changes: ${supplyChanges}`);
 //    - if the value is negative, format the log as 'Removed x parts.'
 console.log('6. Showing supplyChanges...');
 
-for (let x = 0; x < supplyChanges.length; x++) {
-  if (supplyChanges[x] > 0) {
+for (let x = 0; x < supplyChanges.length; x++) { //using variable 'x' to iterate through each item in supplyChanges array
+  if (supplyChanges[x] > 0) { //checking for positive numbers
     console.log('Added ' + supplyChanges[x] + ' parts');
   }
-  else if (supplyChanges[x] === 0) {
+  else if (supplyChanges[x] === 0) { //checking for zero
     console.log('No Change');
   }
-  else {
+  else { // only thing left is negative numbers
     console.log('Removed ' + supplyChanges[x] + ' parts');
   }
 }
@@ -52,9 +52,9 @@ for (let x = 0; x < supplyChanges.length; x++) {
 console.log('---  Stretch Goals  ---');
 // 7. Rewrite the `for` loop from #6 as a `for of` loop.
 console.log('7. Showing supplyChanges with "for of" loop');
-for (parts of supplyChanges) {
+for (parts of supplyChanges) { // same thing as a for loop, but more concise initial declaration
   if (parts > 0) {
-    console.log('Added ' + parts + 'parts');
+    console.log('Added ' + parts + ' parts');
   }
   else if (parts === 0) {
     console.log('No Change');
@@ -67,34 +67,36 @@ for (parts of supplyChanges) {
 
 // 8. Rewrite the `for` loop from #6 as a `while` loop.
 console.log('8. Showing supplyChanges with "while" loop');
-let x = 0;
-while (x < supplyChanges.length) {
-  if (supplyChanges[x] > 0) {
+let x = 0; // declaring global variable to iterate through supplyChanges
+while (x < supplyChanges.length) { // setting while loop condition to limit to length of array
+  if (supplyChanges[x] > 0) { // checking if value at x index is positive
     console.log('Added ' + supplyChanges[x] + ' parts');
   }
-  else if (supplyChanges[x] === 0) {
+  else if (supplyChanges[x] === 0) { // checking if value at x index is zero
     console.log('No Change');
   }
-  else {
+  else { // if value at x index is negative
     console.log('Removed ' + supplyChanges[x] + ' parts');
   }
-  x++;
+  x++; // incrementing x by 1 - no infinite loops plz
 }
 
 // 9. Write a loop to determine the total number of parts available by
 //    adding up all the numbers in the 'supplyChanges' array.
 console.log('9. Total supplies available is:');
-let total = 0;
-for (let i = 0; i < supplyChanges.length; i++) {
-  total = total + supplyChanges[i];
-  console.log(`total is ${total}`);
+let total = 0; // declaring global variable so it's still here after the loop
+for (let i = 0; i < supplyChanges.length; i++) { // setting loop to check each item in supplyChanges
+  total = total + supplyChanges[i]; // add the item value to the total
+  console.log(`total is ${total}`); // tell me the current value of total
 }
-console.log(total);
+console.log(total); //tell me the final total
 
+// Why did we declare a partsNeeded variable at the beginning?
 console.log('Did we get enough parts?');
 if (partsNeeded <= total){
   console.log('Yes');
 }
 else {
-  console.log('Need', (partsNeeded - total), 'more parts');
+  console.log('No, we need', (partsNeeded - total), 'more parts');
 }
+// Ohhh, that's why! We still need more parts!
