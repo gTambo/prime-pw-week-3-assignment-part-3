@@ -90,3 +90,11 @@ for (let i = 0; i < supplyChanges.length; i++) {
   console.log(`total is ${total}`);
 }
 console.log(total);
+
+console.log('Did we get enough parts?');
+if (partsNeeded <= total){
+  console.log('Yes');
+}
+else {
+  console.log('Need', (partsNeeded - total), 'more parts');
+}
